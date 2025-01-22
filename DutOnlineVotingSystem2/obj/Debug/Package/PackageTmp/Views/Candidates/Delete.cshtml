@@ -1,0 +1,56 @@
+﻿@model DutOnlineVotingSystem2.Models.Candidates
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Candidates</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IsSubscribedToNewsletter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsSubscribedToNewsletter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GetMembershipType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GetMembershipType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partyName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

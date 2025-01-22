@@ -1,0 +1,50 @@
+﻿@model DutOnlineVotingSystem2.Models.Candidates
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Candidates</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IsSubscribedToNewsletter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsSubscribedToNewsletter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GetMembershipType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GetMembershipType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partyName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Name }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
